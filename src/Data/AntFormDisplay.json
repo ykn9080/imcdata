@@ -1,0 +1,953 @@
+{
+  "5f7180353f15603130abe066": {
+    "setting": {
+      "formItemLayout": {
+        "labelCol": {
+          "span": 2
+        },
+        "wrapperCol": {
+          "span": 22
+        }
+      },
+      "layout": "horizontal",
+      "formColumn": 1,
+      "size": "middle",
+      "lineheight": "small",
+      "initialValues": {
+        "type": "user"
+      }
+    },
+    "list": [
+      {
+        "label": "Title",
+        "name": "title",
+        "type": "input",
+        "seq": 0
+      },
+      {
+        "label": "Desc",
+        "name": "desc",
+        "type": "input",
+        "seq": 1
+      },
+      {
+        "label": "Link",
+        "name": "link",
+        "type": "input",
+        "seq": 2,
+        "placeholder": "comma when multiple link"
+      },
+      {
+        "label": "Tag",
+        "name": "tag",
+        "type": "input",
+        "seq": 3,
+        "placeholder": "comma when multiple link"
+      },
+      {
+        "label": "Type",
+        "name": "type",
+        "type": "radio.group",
+        "seq": 4,
+        "optionArray": [
+          {
+            "value": "user",
+            "text": "user"
+          },
+          {
+            "value": "admin",
+            "text": "admin"
+          }
+        ]
+      },
+      {
+        "label": "Related",
+        "name": "related",
+        "type": "select.multiple",
+        "seq": 5,
+        "placeholder": "multiple select"
+      }
+    ]
+  },
+  "5f101b3289db1023b0165b1a": {
+    "setting": {
+      "formItemLayout": {
+        "labelCol": {
+          "span": 6
+        },
+        "wrapperCol": {
+          "span": 18
+        }
+      },
+      "layout": "horizontal",
+      "formColumn": 1,
+      "size": "middle",
+      "lineheight": "small",
+      "initialValues": {
+        "datatype": "string",
+        "key": "calc"
+      }
+    },
+    "list": [
+      {
+        "label": "Key",
+        "name": "key",
+        "type": "input",
+        "seq": 0
+      },
+      {
+        "label": "Title",
+        "name": "titletext",
+        "type": "input",
+        "seq": 1
+      },
+      {
+        "label": "DataType",
+        "name": "datatype",
+        "type": "select",
+        "seq": 2,
+        "optionArray": [
+          {
+            "value": "string",
+            "text": "string"
+          },
+          {
+            "value": "int",
+            "text": "int"
+          },
+          {
+            "value": "float",
+            "text": "float"
+          },
+          {
+            "value": "bool",
+            "text": "bool"
+          },
+          {
+            "value": "datetime",
+            "text": "datetime"
+          }
+        ]
+      },
+      {
+        "label": "Decimal",
+        "name": "decimal",
+        "type": "select",
+        "seq": 3,
+        "optionArray": [
+          {
+            "value": "0",
+            "text": "0"
+          },
+          {
+            "value": "1",
+            "text": "0.0"
+          },
+          {
+            "value": "2",
+            "text": "0.00"
+          },
+          {
+            "value": "3",
+            "text": "0.000"
+          },
+          {
+            "value": "4",
+            "text": "0.0000"
+          }
+        ],
+        "shouldupdate": true,
+        "shouldfield": "datatype",
+        "shouldvalue": "float"
+      },
+      {
+        "label": "Sort",
+        "name": "sort",
+        "type": "checkbox",
+        "seq": 4
+      },
+      {
+        "label": "Calculate Rule",
+        "name": "calculaterule",
+        "type": "input.textarea",
+        "seq": 5,
+        "minRows": 4,
+        "maxRows": 10,
+        "tooltipmsg": "",
+        "shouldupdate": true,
+        "shouldfield": "key",
+        "shouldvalue": "calc",
+        "msglow": "(1) simple: $Unit * 0.3   (2)conditional:  condition,true,false: $Units>100,$Total*0.03,0"
+      },
+      {
+        "label": "Submit",
+        "name": "",
+        "type": "button",
+        "seq": 6,
+        "action": "submit",
+        "btnStyle": "primary",
+        "btnColor": "primary",
+        "align": "right"
+      }
+    ]
+  },
+  "5f0e8d8689db1023b0165b18": {
+    "setting": {
+      "formItemLayout": {
+        "labelCol": {
+          "span": 2
+        },
+        "wrapperCol": {
+          "span": 22
+        }
+      },
+      "layout": "horizontal",
+      "formColumn": 1,
+      "size": "middle",
+      "lineheight": "small",
+      "initialValues": {
+        "type": "matrix"
+      }
+    },
+    "list": [
+      {
+        "label": "Type",
+        "name": "type",
+        "type": "select",
+        "seq": 0,
+        "optionArray": [
+          {
+            "value": "table",
+            "text": "table"
+          },
+          {
+            "value": "chart",
+            "text": "chart"
+          },
+          {
+            "value": "graph",
+            "text": "graph"
+          },
+          {
+            "value": "html",
+            "text": "html"
+          }
+        ],
+        "placeholder": "Select..."
+      },
+      {
+        "label": "Data",
+        "name": "data",
+        "type": "select",
+        "seq": 1,
+        "placeholder": "select data",
+        "shouldupdate": true,
+        "shouldfield": "type",
+        "shouldvalue": "chart,table,matrix"
+      },
+      {
+        "label": "Datas",
+        "name": "datas",
+        "type": "select.multiple",
+        "seq": 2,
+        "shouldupdate": true,
+        "shouldfield": "type",
+        "shouldvalue": "html"
+      }
+    ]
+  },
+  "5f1a590712d3bf549d18e583": {
+    "setting": {
+      "formItemLayout": {
+        "labelCol": {
+          "span": 4
+        },
+        "wrapperCol": {
+          "span": 20
+        }
+      },
+      "layout": "horizontal",
+      "formColumn": 1,
+      "size": "middle",
+      "initialValues": {
+        "id": "5f1a590712d3bf549d18e583",
+        "name": "Chart Create test Copy",
+        "desc": "Chart data, x,y,legend ",
+        "column": 1,
+        "labelwidth": 4,
+        "layout": "horizontal",
+        "size": "middle",
+        "lineheight": "small",
+        "charttype": "bar"
+      },
+      "lineheight": "small"
+    },
+    "list": [
+      {
+        "type": "input",
+        "label": "Title",
+        "name": "title",
+        "seq": 0
+      },
+      {
+        "type": "input",
+        "label": "Desc",
+        "name": "desc",
+        "seq": 1
+      },
+      {
+        "label": "Chart Type",
+        "name": "charttype",
+        "type": "select",
+        "seq": 2,
+        "optionArray": [
+          {
+            "value": "bar",
+            "text": "bar"
+          },
+          {
+            "value": "column",
+            "text": "column"
+          },
+          {
+            "value": "line",
+            "text": "line"
+          },
+          {
+            "value": "area",
+            "text": "area"
+          },
+          {
+            "value": "pie",
+            "text": "pie"
+          },
+          {
+            "value": "box plot",
+            "text": "box plot"
+          },
+          {
+            "value": "scatter",
+            "text": "scatter"
+          },
+          {
+            "value": "parallel coordinates",
+            "text": "parallel coordinates"
+          },
+          {
+            "value": "matrixdiagram",
+            "text": "matrixdiagram"
+          },
+          {
+            "value": "dendrogram",
+            "text": "dendrogram"
+          },
+          {
+            "value": "treemap",
+            "text": "treemap"
+          }
+        ],
+        "initialValues": {
+          "aggregate": "sum"
+        }
+      },
+      {
+        "type": "select",
+        "name": "xField",
+        "seq": 3,
+        "label1": "Xaxis",
+        "label": "xField",
+        "initialValues": {
+          "aggregate": "sum"
+        }
+      },
+      {
+        "shouldupdate": true,
+        "shouldfield": "charttype",
+        "shouldvalue": "scatter plot,treemap",
+        "type": "select",
+        "label": "Yaxis",
+        "name": "yaxis",
+        "seq": 4
+      },
+      {
+        "label": "yField",
+        "name": "yField",
+        "type": "select",
+        "seq": 5,
+        "initialValues": {
+          "aggregate": "sum"
+        }
+      },
+      {
+        "label": "Aggregate",
+        "name": "aggregate",
+        "type": "select",
+        "seq": 6,
+        "optionArray": [
+          {
+            "value": "n/a",
+            "text": "n/a"
+          },
+          {
+            "value": "sum",
+            "text": "sum"
+          },
+          {
+            "value": "average",
+            "text": "average"
+          },
+          {
+            "value": "count",
+            "text": "count"
+          }
+        ],
+        "defaultValue": "sum",
+        "shouldupdate": true,
+        "shouldfield": "charttype",
+        "shouldvalue": "bar,line,pie,column,area",
+        "initialValues": {
+          "aggregate": "sum"
+        }
+      },
+      {
+        "label": "Series",
+        "name": "series",
+        "type": "select",
+        "seq": 7
+      },
+      {
+        "label": "colorField",
+        "name": "colorField",
+        "type": "select",
+        "seq": 8,
+        "initialValues": {
+          "aggregate": "sum"
+        },
+        "shouldupdate": true,
+        "shouldfield": "charttype",
+        "shouldvalue": "scatter"
+      },
+      {
+        "label": "sizeField",
+        "name": "sizeField",
+        "type": "select",
+        "seq": 9,
+        "initialValues": {
+          "aggregate": "sum"
+        },
+        "shouldupdate": true,
+        "shouldfield": "charttype",
+        "shouldvalue": "scatter"
+      },
+      {
+        "label": "isPercentage",
+        "name": "isPercentage",
+        "type": "checkbox",
+        "seq": 10,
+        "shouldupdate": true,
+        "shouldfield": "series",
+        "shouldvalue": "any",
+        "initialValues": {
+          "aggregate": "sum"
+        }
+      },
+      {
+        "label": "isStack",
+        "name": "isStack",
+        "type": "checkbox",
+        "seq": 11,
+        "shouldupdate": true,
+        "shouldfield": "series",
+        "shouldvalue": "any",
+        "initialValues": {
+          "aggregate": "sum"
+        }
+      },
+      {
+        "label": "isGroup",
+        "name": "isGroup",
+        "type": "checkbox",
+        "seq": 12,
+        "shouldupdate": true,
+        "shouldfield": "series",
+        "shouldvalue": "any",
+        "initialValues": {
+          "aggregate": "sum"
+        }
+      }
+    ]
+  },
+  "5f27f3e012d3bf701818e585": {
+    "setting": {
+      "formItemLayout": {
+        "labelCol": {
+          "span": 4
+        },
+        "wrapperCol": {
+          "span": 20
+        }
+      },
+      "layout": "horizontal",
+      "formColumn": 1,
+      "size": "middle",
+      "lineheight": "small"
+    },
+    "list": [
+      {
+        "label": "Title",
+        "name": "title",
+        "type": "input",
+        "seq": 0
+      },
+      {
+        "label": "Desc",
+        "name": "desc",
+        "type": "input.textarea",
+        "seq": 1
+      },
+      {
+        "label": "Save",
+        "name": "",
+        "type": "button",
+        "seq": 3,
+        "action": "submit",
+        "btnStyle": "primary",
+        "btnColor": "primary",
+        "align": "right"
+      }
+    ]
+  },
+  "5f61aa619b954d3dd4877559": {
+    "setting": {
+      "formItemLayout": {
+        "labelCol": {
+          "span": 4
+        },
+        "wrapperCol": {
+          "span": 20
+        }
+      },
+      "layout": "horizontal",
+      "formColumn": 1,
+      "size": "middle"
+    },
+    "list": [
+      {
+        "type": "select",
+        "label": "Data",
+        "name": "data",
+        "seq": 0
+      },
+      {
+        "type": "select",
+        "label": "Id",
+        "name": "id",
+        "seq": 1
+      },
+      {
+        "type": "select",
+        "label": "Label",
+        "name": "label",
+        "seq": 2
+      },
+      {
+        "label": "Value",
+        "name": "value",
+        "type": "select",
+        "seq": 3
+      },
+      {
+        "type": "select",
+        "label": "Group",
+        "name": "group",
+        "seq": 4
+      },
+      {
+        "type": "select",
+        "label": "Color",
+        "name": "color",
+        "seq": 5,
+        "btnright": true,
+        "btntitle": "plus",
+        "btnevent": "document.getElementById(\"dvNode\").style.display = \"none\";document.getElementById(\"dvColor\").style.display = \"block\"",
+        "iconbtn": true
+      },
+      {
+        "type": "select",
+        "label": "Size",
+        "name": "size",
+        "seq": 6,
+        "msglow": "",
+        "msgright": "",
+        "msgtop": "",
+        "tooltipmsg": ""
+      },
+      {
+        "label": "Close",
+        "name": "closenodes",
+        "type": "button",
+        "seq": 7,
+        "action": "cancel",
+        "align": "right"
+      },
+      {
+        "label": "Nodename",
+        "name": "",
+        "type": "input",
+        "seq": 8
+      },
+      {
+        "label": "Save",
+        "name": "savenodes",
+        "type": "button",
+        "seq": 9,
+        "action": "submit",
+        "align": "right",
+        "btnColor": "primary",
+        "btnStyle": "primary"
+      }
+    ]
+  },
+  "5f61ae469b954d3dd487755c": {
+    "setting": {
+      "formItemLayout": {
+        "labelCol": {
+          "span": 4
+        },
+        "wrapperCol": {
+          "span": 20
+        }
+      },
+      "layout": "horizontal",
+      "formColumn": 1,
+      "size": "middle",
+      "lineheight": "small"
+    },
+    "list": [
+      {
+        "type": "select",
+        "label": "Data",
+        "name": "data",
+        "seq": 0
+      },
+      {
+        "label": "Edge name",
+        "name": "nodename",
+        "type": "input",
+        "seq": 1
+      },
+      {
+        "type": "select",
+        "label": "From",
+        "name": "from",
+        "seq": 2
+      },
+      {
+        "type": "select",
+        "label": "To",
+        "name": "to",
+        "seq": 3
+      },
+      {
+        "label": "Value",
+        "name": "value",
+        "type": "select",
+        "seq": 4
+      },
+      {
+        "type": "select",
+        "label": "Tickness",
+        "name": "tickness",
+        "seq": 5
+      },
+      {
+        "type": "select",
+        "label": "Color",
+        "name": "color",
+        "seq": 6
+      },
+      {
+        "type": "select",
+        "label": "Head",
+        "name": "head",
+        "seq": 7
+      },
+      {
+        "type": "select",
+        "label": "Line",
+        "name": "line",
+        "seq": 8
+      },
+      {
+        "type": "checkbox",
+        "label": "Directed",
+        "name": "directed",
+        "seq": 9
+      },
+      {
+        "label": "Close",
+        "name": "closeedges",
+        "type": "button",
+        "seq": 10,
+        "action": "cancel",
+        "align": "right"
+      },
+      {
+        "label": "Save",
+        "name": "saveedges",
+        "type": "button",
+        "seq": 11,
+        "action": "submit",
+        "btnColor": "primary",
+        "btnStyle": "primary",
+        "align": "right"
+      }
+    ]
+  },
+  "5f8e8ea4dbd58cbe2f3129f4": {
+    "setting": {
+      "formItemLayout": {
+        "labelCol": {
+          "span": 4
+        },
+        "wrapperCol": {
+          "span": 20
+        }
+      },
+      "layout": "horizontal",
+      "formColumn": 1,
+      "size": "middle",
+      "lineheight": "middle"
+    },
+    "list": [
+      {
+        "label": "Column",
+        "name": "column",
+        "type": "select",
+        "seq": 2,
+        "optionArray": [
+          {
+            "value": "1",
+            "text": "1"
+          },
+          {
+            "value": "2",
+            "text": "2"
+          },
+          {
+            "value": "3",
+            "text": "3"
+          },
+          {
+            "value": "4",
+            "text": "4"
+          }
+        ]
+      },
+      {
+        "label": "Order",
+        "name": "order",
+        "type": "select.multiple",
+        "seq": 3
+      },
+      {
+        "label": "Title",
+        "name": "title",
+        "type": "input",
+        "seq": 0
+      },
+      {
+        "label": "Desc",
+        "name": "desc",
+        "type": "input",
+        "seq": 1
+      },
+      {
+        "label": "Format",
+        "name": "format",
+        "type": "select",
+        "seq": 4,
+        "optionArray": [
+          {
+            "value": "-1",
+            "text": "NA"
+          },
+          {
+            "value": "0",
+            "text": "0"
+          },
+          {
+            "value": "1",
+            "text": "0.0"
+          },
+          {
+            "value": "2",
+            "text": "0.00"
+          },
+          {
+            "value": "3",
+            "text": "0.000"
+          },
+          {
+            "value": "4",
+            "text": "0.0000"
+          }
+        ]
+      }
+    ]
+  },
+  "5f0ff2fe89db1023b0165b19": {
+    "setting": {
+      "formItemLayout": {
+        "labelCol": {
+          "span": 0
+        },
+        "wrapperCol": {
+          "span": 24
+        }
+      },
+      "layout": "horizontal",
+      "formColumn": 1,
+      "size": "middle",
+      "lineheight": "small"
+    },
+    "list": [
+      {
+        "label": "Title",
+        "name": "title",
+        "type": "input",
+        "seq": 0,
+        "placeholder": "title of table"
+      },
+      {
+        "label": "Size",
+        "name": "size",
+        "type": "radio.group",
+        "seq": 2,
+        "optionArray": [
+          {
+            "value": "small",
+            "text": "small"
+          },
+          {
+            "value": "middle",
+            "text": "middle"
+          },
+          {
+            "value": "large",
+            "text": "large"
+          }
+        ]
+      },
+      {
+        "label": "Desc",
+        "name": "desc",
+        "type": "input.textarea",
+        "seq": 1
+      }
+    ]
+  },
+  "60fe76d93f6f282f238e01bb": {
+    "setting": {
+      "formItemLayout": {
+        "labelCol": {
+          "span": 4
+        },
+        "wrapperCol": {
+          "span": 20
+        }
+      },
+      "layout": "horizontal",
+      "formColumn": 1,
+      "type": "",
+      "size": "middle",
+      "lineheight": "middle"
+    },
+    "list": [
+      {
+        "label": "Url",
+        "name": "url",
+        "type": "input",
+        "seq": 0,
+        "placeholder": "data src url"
+      },
+      {
+        "label": "Method",
+        "name": "method",
+        "type": "select",
+        "seq": 1,
+        "placeholder": "get;post",
+        "optionArray": [
+          {
+            "value": "get",
+            "text": "get"
+          },
+          {
+            "value": "post",
+            "text": "post"
+          }
+        ],
+        "defaultValue": "get"
+      },
+      {
+        "label": "Body",
+        "name": "body",
+        "type": "input",
+        "seq": 2,
+        "shouldupdate": true,
+        "shouldfield": "method",
+        "shouldvalue": "post"
+      },
+      {
+        "label": "Header",
+        "name": "header",
+        "type": "input",
+        "seq": 3
+      },
+      {
+        "label": "Fetch",
+        "name": "fetch",
+        "type": "button",
+        "seq": 1003,
+        "btnStyle": "primary",
+        "btnColor": "primary",
+        "align": "right",
+        "action": "submit"
+      },
+      {
+        "label": "Datafield",
+        "name": "datafield",
+        "type": "input",
+        "seq": 1004,
+        "placeholder": "specify datalist field"
+      }
+    ]
+  },
+  "newdash": {
+    "list": [
+      {
+        "label": "Title",
+        "name": "title",
+        "type": "input",
+        "seq": 0
+      },
+      {
+        "label": "Desc",
+        "name": "desc",
+        "type": "input",
+        "seq": 1
+      }
+    ],
+    "setting": {
+      "formItemLayout": {
+        "labelCol": {
+          "span": 2
+        },
+        "wrapperCol": {
+          "span": 22
+        }
+      },
+      "layout": "vertical"
+    }
+  }
+}
