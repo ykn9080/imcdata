@@ -5,9 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: imctable
-    image: yknam/imctable
+    container_name: imcdata
+    image: yknam/imcdata
     volumes:
       - ./src:/app/src
     ports:
-      - "3009:80"
+      - "7009:80"
