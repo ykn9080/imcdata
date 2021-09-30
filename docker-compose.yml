@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: imctable
+    image: yknam/imctable
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "3009:80"

@@ -22,6 +22,7 @@ const Index = ({ authObj, onChange }) => {
     if (!authObj) authObj = {};
     authObj.dtlist = dtlist;
     authObj.dtsetting = dtsetting;
+    console.log("from imcdata", authObj);
     if (onChange) onChange(authObj);
   };
   return (

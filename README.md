@@ -15,12 +15,22 @@ npm install imcData
 ```js
 import Data from "imcData"
 
-# send 'data' and return 'onChange'
-<Data data={data} onChange={onChange} />
+# send 'authObj' i.e. list and setting about data and return 'onChange'
+<Data authObj={data} onChange={onChange} />
 
-const onChange=(val)=>{
-//val={dtlist:[...], dtsetting={}}
+# onChange 'return' has 'dtlist' (data list made of json object) and 'dtsetting' ie composed of
+various data form setting (excel, cut & paste, or api)
+
+# receive return data from parent page...
+const onChange=(return)=>{
+//return={dtlist:[...], dtsetting={}}
 }
+# 'return' example
+{ dtlist: [
+{OrderDate: 41883, Region: 'Central', Rep: 'Smith', Item: 'Desk', Units: 2},
+{OrderDate: 42172, Region: 'Central', Rep: 'Kivell', Item: 'Desk', Units: 5},
+{OrderDate: 42257, Region: 'Central', Rep: 'Gill', Item: 'Penc', Units:3}],
+dtsetting: {dtype: 'paste'}}
 ```
 
 ## Contributing
