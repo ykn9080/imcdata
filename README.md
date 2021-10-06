@@ -7,7 +7,7 @@ imcData enable to create various type of data easily.
 Use npm or yarn.
 
 ```bash
-npm install imcData
+npm install imcdata
 ```
 
 ## Usage

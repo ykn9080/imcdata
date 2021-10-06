@@ -108,6 +108,7 @@ const DataPaste = ({ authObj, onDataUpdate }) => {
     "wq*",
     "html",
     "htm",
+    "json",
   ]
     .map(function (x) {
       return "." + x;
