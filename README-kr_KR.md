@@ -1,10 +1,10 @@
 # imcData
 
-imcData enable to create various type of data easily.
+api, excel, cut & paste 형태의 데이터를 가져올수 있다.
 
 ### ✨ [Demo](http://imcmaster.iptime.org:7009)
 
-English | [한글](./README-kr_KR.md)
+[English](./README.md) | 한글
 
 ## Install
 
@@ -23,23 +23,28 @@ npm install imcdata
 ```js
 import Data from "imcData"
 
-# send 'authObj' i.e. list and setting about data and return 'onChange'
-<Data authObj={data} onChange={onChange} />
+const DataSample=()=>{
+    const onChange=(val)=>{
+    //val={dtlist:[...], dtsetting={}}
+    }
 
-# onChange 'return' has 'dtlist' (data list made of json object) and 'dtsetting' ie composed of
-various data form setting (excel, cut & paste, or api)
-
-# receive return data from parent page...
-const onChange=(return)=>{
-//return={dtlist:[...], dtsetting={}}
+    return(
+    <Data authObj={data} onChange={onChange} />
+    )
 }
+
 # 'return' example
 { dtlist: [
 {OrderDate: 41883, Region: 'Central', Rep: 'Smith', Item: 'Desk', Units: 2},
 {OrderDate: 42172, Region: 'Central', Rep: 'Kivell', Item: 'Desk', Units: 5},
 {OrderDate: 42257, Region: 'Central', Rep: 'Gill', Item: 'Penc', Units:3}],
 dtsetting: {dtype: 'paste'}}
+
 ```
+
+<p> 'authObj'에 데이터와 셋팅정보를 입력할 수 있고, 이때 초기값으로 설정된다. </p>
+<p>데이터 작업의 결과는 onChange 이벤트의 값으로 리턴되며 datalist값과 setting값으로 구성된 object형태이다. </p>
+<p> 리턴된 값으로 다음 스텝을 진행할 수 있다.</p>
 
 ## Contributing
 

@@ -13,7 +13,7 @@ const Index = ({ authObj, onChange }) => {
   const [dtype, setDtype] = useState();
 
   useEffect(() => {
-    if (authObj && authObj?.dtsetting) setDtype(authObj.dtsetting.dtype);
+    if (authObj && authObj.dtsetting) setDtype(authObj.dtsetting.dtype);
   }, []);
   function handleChange(value) {
     setDtype(value);

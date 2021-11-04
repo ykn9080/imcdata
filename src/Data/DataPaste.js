@@ -12,7 +12,7 @@ const DataPaste = ({ authObj, onDataUpdate }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (authObj?.dtlist) {
+    if (authObj && authObj.dtlist) {
       userInput(authObj.dtlist);
     }
   }, []);

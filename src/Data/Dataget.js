@@ -17,7 +17,7 @@ const Dataget = ({ authObj, onDataUpdate, ...props }) => {
     setShowalert(false);
     setLoading(false);
 
-    if (authObj?.dtsetting) {
+    if (authObj && authObj.dtsetting) {
       setInitVal(authObj.dtsetting);
 
       if (authObj.dtlist) setResult(JSON.stringify(authObj.dtlist, null, 2));
