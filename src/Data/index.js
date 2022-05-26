@@ -71,7 +71,7 @@ const Index = ({ authObj, onChange }) => {
               <div>
                 <label
                   for="dtype"
-                  style={{ width: 50, marginRight: 10, marginLeft: 20 }}
+                  style={{ width: 150, marginRight: 10, marginLeft: 20 }}
                 >
                   Data type:
                 </label>

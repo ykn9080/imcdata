@@ -879,6 +879,10 @@
         "placeholder": "get;post",
         "optionArray": [
           {
+            "value": "na",
+            "text": "select..."
+          },
+          {
             "value": "get",
             "text": "get"
           },
@@ -887,7 +891,7 @@
             "text": "post"
           }
         ],
-        "defaultValue": "get"
+        "defaultValue": "na"
       },
       {
         "label": "Body",
@@ -897,6 +901,16 @@
         "shouldupdate": true,
         "shouldfield": "method",
         "shouldvalue": "post"
+      },
+      {
+        "label": "Parameters",
+        "name": "parameters",
+        "type": "input",
+        "seq": 2,
+        "shouldupdate": true,
+        "shouldfield": "method",
+        "shouldvalue": "get",
+        "placeholder": "param1=aa&param2=bb"
       },
       {
         "label": "Header",

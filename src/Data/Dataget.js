@@ -39,7 +39,12 @@ const Dataget = ({ authObj, onDataUpdate, ...props }) => {
       url: val.url,
     };
     if (val.header) options = { ...options, header: val.header };
-
+    if (val.body) options = { ...options, data: JSON.parse(val.body) };
+    if (val.parameters) {
+      const newurl = `${val.url}?${val.parameters}`;
+      options = { ...options, url: newurl };
+    }
+    console.log(options);
     setLoading(true);
     val.dtype = "api";
     axios
