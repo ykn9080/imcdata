@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AntFormDisplay from "imcformbuilder";
-import formdt from "./AntFormDisplay.json";
+import formdt from "Data/AntFormDisplay.json";
 import { Input, Row, Col, Alert, Spin, message } from "antd";
 import styled, { css } from "styled-components";
 

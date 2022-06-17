@@ -161,6 +161,69 @@
         "shouldvalue": "float"
       },
       {
+        "label": "DateFormat",
+        "name": "dateformat",
+        "type": "select",
+        "seq": 3,
+        "optionArray": [
+          {
+            "value": "yyyy-MM-DD",
+            "text": "yyyy-MM-DD"
+          },
+          {
+            "value": "YY-MM-DD",
+            "text": "YY-MM-DD"
+          },
+          {
+            "value": "M-D",
+            "text": "M-D"
+          },
+          {
+            "value": "MM/DD/yyyy",
+            "text": "MM/DD/yyyy"
+          },
+          {
+            "value": "MM/DD/YY",
+            "text": "MM/DD/YY"
+          },
+          {
+            "value": "M/D",
+            "text": "M/D"
+          },
+          {
+            "value": "YYYY-MM-DD HH:mm:ss",
+            "text": "YYYY-MM-DD HH:mm:ss"
+          },
+          {
+            "value": "MM",
+            "text": "MM"
+          },
+          {
+            "value": "MMMM",
+            "text": "MMMM"
+          },
+          {
+            "value": "DD",
+            "text": "DD"
+          },
+          {
+            "value": "dddd",
+            "text": "dddd"
+          },
+          {
+            "value": "HH:mm",
+            "text": "HH:mm"
+          },
+          {
+            "value": "hh:mm A",
+            "text": "hh:mm A"
+          }
+        ],
+        "shouldupdate": true,
+        "shouldfield": "datatype",
+        "shouldvalue": "datetime"
+      },
+      {
         "label": "Sort",
         "name": "sort",
         "type": "checkbox",
@@ -894,10 +957,17 @@
         "defaultValue": "na"
       },
       {
+        "type": "checkbox",
+        "label": "Refresh",
+        "name": "refresh",
+        "seq": 2
+      },
+
+      {
         "label": "Body",
         "name": "body",
         "type": "input",
-        "seq": 2,
+        "seq": 3,
         "shouldupdate": true,
         "shouldfield": "method",
         "shouldvalue": "post"
@@ -906,24 +976,31 @@
         "label": "Parameters",
         "name": "parameters",
         "type": "input",
-        "seq": 2,
+        "seq": 3,
         "shouldupdate": true,
         "shouldfield": "method",
         "shouldvalue": "get",
         "placeholder": "param1=aa&param2=bb"
       },
-
+      {
+        "label": "ParamMapping",
+        "name": "parammapping",
+        "type": "input",
+        "seq": 4,
+        "placeholder": "[{fieldname: parametername},...]",
+        "msglow": "현table의 필드와 외부입력parameter간의 mapping"
+      },
       {
         "label": "Header",
         "name": "header",
         "type": "input",
-        "seq": 3
+        "seq": 5
       },
       {
         "label": "Fetch",
         "name": "fetch",
         "type": "button",
-        "seq": 1003,
+        "seq": 6,
         "btnStyle": "primary",
         "btnColor": "primary",
         "align": "right",
@@ -933,7 +1010,7 @@
         "label": "Datafield",
         "name": "datafield",
         "type": "input",
-        "seq": 1004,
+        "seq": 7,
         "placeholder": "specify datalist field"
       }
     ]

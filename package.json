@@ -1,9 +1,12 @@
 {
   "name": "imcdata",
-  "version": "0.1.2",
+  "version": "0.1.9",
   "module": "dist/index.js",
   "main": "dist/index.js",
-  "files":["dist/*.js", "dist/**/&.js"],
+  "files": [
+    "dist/*.js",
+    "dist/**/&.js"
+  ],
   "private": false,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
@@ -22,7 +25,9 @@
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-drag-listview": "^0.2.1",
     "react-icons": "^4.3.1",
+    "react-resizable": "^3.0.4",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.3",

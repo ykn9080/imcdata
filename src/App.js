@@ -1,5 +1,5 @@
-import "./App.css";
-import Data from "./Data";
+import "App.css";
+import Data from "Data";
 
 function App({ data, onChange }) {
   return (

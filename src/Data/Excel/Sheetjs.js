@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as XLSX from "xlsx";
 import { Row, Col, Input, Alert, Table, message } from "antd";
-import "./Styles.css";
+import "Data/Excel/Styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const { TextArea } = Input;

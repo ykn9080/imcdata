@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
-
-import Dataget from "./Dataget";
-import DataPaste from "./DataPaste";
-import SheetJSApp from "./Excel/Sheetjs";
+import _ from "lodash";
+import Dataget from "Data/Dataget";
+import DataPaste from "Data/DataPaste";
+import SheetJSApp from "Data/Excel/Sheetjs";
 import { Select, Row, Col, Typography, Button, Divider, Tooltip } from "antd";
 import { BiReset } from "react-icons/bi";
+import SingleTable, { UpdateColnData } from "Data/SingleTable";
 
 const { Option } = Select;
 const { Title } = Typography;
 
 const Index = ({ authObj, onChange }) => {
   const [dtype, setDtype] = useState();
+  const [newObj, setNewObj] = useState();
 
   useEffect(() => {
     if (authObj && authObj.dtsetting) setDtype(authObj.dtsetting.dtype);
+    setNewObj(authObj);
   }, []);
   function handleChange(value) {
     setDtype(value);
@@ -21,9 +24,18 @@ const Index = ({ authObj, onChange }) => {
   const onDataUpdate = (authObj, dtlist, dtsetting) => {
     if (!authObj) authObj = {};
     authObj.dtlist = dtlist;
+    authObj.originlist = dtlist;
     authObj.dtsetting = dtsetting;
-    console.log("from imcdata", authObj);
+    localStorage.setItem("modelchart", JSON.stringify(authObj));
+    setNewObj(_.cloneDeep(authObj));
     if (onChange) onChange(authObj);
+  };
+  const saveSingleTable = (newdata, activeKey) => {
+    //change dtlist
+    const rtn = UpdateColnData(newdata);
+    newdata.dtlist = rtn.dtlist;
+    localStorage.setItem("modelchart", JSON.stringify(newdata));
+    if (onChange) onChange(newdata);
   };
   return (
     <div style={{ padding: "5px 5px 10px 10px" }}>
@@ -91,8 +103,18 @@ const Index = ({ authObj, onChange }) => {
             );
         }
       })()}
+      <div style={{ padding: 10 }}>
+        <SingleTable
+          dataObj={newObj}
+          // tbsetting={tbsetting}
+          edit={true}
+          className="gridcontent"
+          save={saveSingleTable}
+        />
+      </div>
     </div>
   );
 };
 
 export default Index;
+export { SingleTable, UpdateColnData };
